@@ -1,28 +1,25 @@
 import datetime
 
-
 date = datetime.datetime.now()
 
-
 print('When were you born?')
-yearasstring = input('Year(YYYY) ')
-monthasstring = input('Month(MM) ')
-dayasstring = input('Day(DD) ')
-
-year = int(yearasstring)
-month = int(monthasstring)
-day = int(dayasstring)
+year = int(input('Year(YYYY) '))
+month = int(input('Month(MM) '))
+day = int(input('Day(DD) '))
 
 age_years = (date.year - year)
+hadBirthday = f'You are {age_years}'
+notHadBirthday = f'You are {age_years - 1}'
+
+print(hadBirthday)
+print(notHadBirthday)
+
 if month > date.month: {
-        print('Your age is: ' + str(age_years - 1))
+        print(notHadBirthday)
 }
 elif month == date.month & day > date.day: {
-        print("Your age is: " + str(age_years - 1))
-}
-elif month == date.month & day < date.day: {
-        print('Your age is: ' + str(age_years))
+        print(notHadBirthday)
 }
 else: {
-    print('Your age is: ' + str(age_years))
+    print(hadBirthday)
 }
