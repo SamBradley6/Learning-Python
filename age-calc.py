@@ -11,9 +11,6 @@ age_years = (date.year - year)
 hadBirthday = f'You are {age_years}'
 notHadBirthday = f'You are {age_years - 1}'
 
-print(hadBirthday)
-print(notHadBirthday)
-
 if month > date.month: {
         print(notHadBirthday)
 }

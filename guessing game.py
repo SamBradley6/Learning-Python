@@ -1,14 +1,21 @@
 hidden_number = 9
 print("Guess the number (1-9):")
-
 guess = int(input("Guess: "))
-guessNumber = 1
+guessNumber = 0
 
 while guess != hidden_number:
-    if guessNumber < 4:
-        print(guess);
-        guessNumber += 1
-else:
-    print("You failed")
+    guessNumber += 1
+    print(f"guess number {guessNumber}")
+    if guessNumber == 3: {
+        print("Out of guesses");
+    }
+    break
+    print("Guess again")
+    guess = int(input("Guess: "))
 
-print("done")
+    if guess == hidden_number: {
+        print("You win")
+    }
+
+
+
